@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <style>
+    .loading {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    .loading span {
+      display: inline-block;
+      wIDth: 8px;
+      height: 100%;
+      border-radius: 4px;
+      background: lightgreen;
+      animation: load 1s ease infinite;
+    }
+
+    @keyframes load {
+
+      0%,
+      100% {
+        height: 40px;
+        background: lightgreen;
+      }
+
+      50% {
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+      }
+    }
+
+    .loading span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loading span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .loading span:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .loading span:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
